@@ -1,2 +1,10 @@
 git checkout -- file可以丢弃工作区的修改
 git reset HEAD <file>可以把暂存区的修改撤销掉（unstage），重新放回工作区
+git checkout命令加上-b参数表示创建并切换分支
+git checkout main 切换回main分支
+git merge dev 把dev分支的工作成果合并到main分支上
+git branch -d dev 合并完成后，就可以放心地删除dev分支了
+git switch -c dev 创建并切换到dev分支
+git switch main 直接切换到已有的main分支
+解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
+合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并
